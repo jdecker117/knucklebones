@@ -1,38 +1,87 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+  justify-items: center;
   align-items: center;
+  background-color: #FFE53B;
+  background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  padding: 2rem;
+  font-family: 'Fuzzy Bubbles';
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-family: 'Fuzzy Bubbles';
+}
+
+.board-container {
+  display: grid;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 15vw;
 }
 
-.App-link {
-  color: #61dafb;
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.tile {
+  display: flex;
+  justify-content: center;
+  border: 4px solid black;
+  width: 5rem;
+  height: 5rem
+}
+
+#a1, #a2, #a3, #a4, #a5, #a6,
+#b1, #b2, #b3, #b4, #b5, #b6 {
+  border-bottom: none
+}
+
+#a1, #a2, #a4, #a5, #a7, #a8,
+#b1, #b2, #b4, #b5, #b7, #b8 {
+  border-right: none
+}
+
+@media(max-width: 1655px) {
+  .board-container {
+    width: 18vw
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media(max-width: 1380px) {
+  .board-container {
+    width: 23vw
+  }
+}
+
+@media(max-width: 1080px) {
+  .board-container {
+    width: 27vw
+  }
+}
+
+@media(max-width: 920px) {
+  .board-container {
+    width: 35vw
+  }
+}
+
+@media(max-width: 710px) {
+  .board-container {
+    width: 45vw
   }
 }
